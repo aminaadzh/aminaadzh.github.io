@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основы кибербезопасности — внешний курс</title>
+    <style>
+        :root {
+            --bg: #f5f7fa;
+            --card-bg: #ffffff;
+            --text: #2d3436;
+            --heading: #1a1a2e;
+            --accent: #6c5ce7;
+            --border: #e0e0e0;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'IBM Plex Sans', 'Segoe UI', Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        header {
+            background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+            color: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        header h1 { font-size: 2em; margin-bottom: 10px; }
+        header p { font-size: 1.1em; opacity: 0.9; }
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow);
+        }
+        .card h2 {
+            color: var(--accent);
+            margin-bottom: 15px;
+            font-size: 1.4em;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 8px;
+        }
+        .card h3 { 
+            color: var(--heading);
+            margin: 15px 0 10px;
+            font-size: 1.2em;
+        }
+        .card ul { list-style: none; padding-left: 0; }
+        .card ul li { margin: 5px 0; }
+        .card ul ul { padding-left: 25px; margin: 5px 0; }
+        .card a {
+            color: #6c5ce7;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .card a:hover { text-decoration: underline; color: #4a3db5; }
+        .badge {
+            display: inline-block;
+            background: #dfe6e9;
+            color: #2d3436;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            margin-left: 8px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            transition: transform 0.2s;
+        }
+        .gallery img:hover { transform: scale(1.02); }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            color: #777;
+            font-size: 0.9em;
+        }
+        .step-list { counter-reset: step; }
+        .step-list li { counter-increment: step; margin: 10px 0; }
+        .step-list li::before {
+            content: counter(step);
+            background: var(--accent);
+            color: white;
+            border-radius: 50%;
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            text-align: center;
+            line-height: 24px;
+            margin-right: 8px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- Шапка -->
+        <header>
+            <h1>Основы кибербезопасности</h1>
+            <p>Отчёт по прохождению внешнего курса</p>
+            <p style="margin-top:10px;">Амина Аджигалиева • РУДН • 2026</p>
+        </header>
+
+        <!-- О курсе -->
+        <div class="card">
+            <h2>О курсе</h2>
+            <p>Внешний курс «Основы кибербезопасности» охватывает три ключевые темы:</p>
+            <ul style="margin-top:10px;">
+                <li><strong>Часть 1:</strong> Сетевые протоколы и технологии (TCP/IP, HTTP/HTTPS, TLS, Wi-Fi, Tor)</li>
+                <li><strong>Часть 2:</strong> Шифрование, пароли и защита от фишинга (BitLocker, VeraCrypt, ЭЦП, менеджеры паролей)</li>
+                <li><strong>Часть 3:</strong> Криптография, электронная подпись и блокчейн (RSA, ECDSA, ГОСТ, PoW, сертификаты)</li>
+            </ul>
+        </div>
+
+        <!-- Скринкасты -->
+        <div class="card">
+            <h2>Скринкасты</h2>
+
+            <h3>Часть 1.</h3>
+            <ul>
+                <li><strong>Rutube:</strong> <a href="https://rutube.ru/plst/1569411" target="_blank">Плейлист</a>
+                    <ul>
+                        <li><a href="https://rutube.ru/video/ceecc606d89838101164e7177936a9eb/" target="_blank">Выполнение</a></li>
+                        <li><a href="https://rutube.ru/video/304eb806c86b2697416a3c19822346aa/" target="_blank">Защита презентации</a></li>
+                    </ul>
+                </li>
+                <li><strong>VKvideo:</strong> <a href="https://vkvideo.ru/playlist/-232706022_2" target="_blank">Плейлист</a>
+                    <ul>
+                        <li><a href="https://vkvideo.ru/video-232706022_456239051?pl=-232706022_2" target="_blank">Выполнение</a></li>
+                        <li><a href="https://vkvideo.ru/video-232706022_456239056?pl=-232706022_2" target="_blank">Защита презентации</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Часть 2.</h3>
+            <ul>
+                <li><strong>Rutube:</strong> <a href="https://rutube.ru/plst/1569411" target="_blank">Плейлист</a>
+                    <ul>
+                        <li><a href="https://rutube.ru/video/a78faadd9152f0734c5a1e2db932838a/" target="_blank">Выполнение</a></li>
+                        <li><a href="https://rutube.ru/video/d6f4089f19e109ae48e11bf23541ac2c/" target="_blank">Защита презентации</a></li>
+                    </ul>
+                </li>
+                <li><strong>VKvideo:</strong> <a href="https://vkvideo.ru/playlist/-232706022_2" target="_blank">Плейлист</a>
+                    <ul>
+                        <li><a href="https://vkvideo.ru/video-232706022_456239052?pl=-232706022_2" target="_blank">Выполнение</a></li>
+                        <li><a href="https://vkvideo.ru/video-232706022_456239055?pl=-232706022_2" target="_blank">Защита презентации</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Часть 3.</h3>
+            <ul>
+                <li><strong>Rutube:</strong> <a href="https://rutube.ru/plst/1569411" target="_blank">Плейлист</a>
+                    <ul>
+                        <li><a href="https://rutube.ru/video/ad766c0e1c9b4a48d43a64373264003a/" target="_blank">Выполнение</a></li>
+                        <li><a href="https://rutube.ru/video/cb9ac403ca9cce639f5cac8378a9dec7/" target="_blank">Защита презентации</a></li>
+                    </ul>
+                </li>
+                <li><strong>VKvideo:</strong> <a href="https://vkvideo.ru/playlist/-232706022_2" target="_blank">Плейлист</a>
+                    <ul>
+                        <li><a href="https://vkvideo.ru/video-232706022_456239053?pl=-232706022_2" target="_blank">Выполнение</a></li>
+                        <li><a href="https://vkvideo.ru/video-232706022_456239054?pl=-232706022_2" target="_blank">Защита презентации</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Сертификат -->
+        <div class="card">
+            <h2>Сертификат</h2>
+            <ul>
+                <li><a href="https://stepik.org/course/111512" target="_blank">Сертификат курса на Stepik</a></li>
+            </ul>
+        </div>
+
+        <!-- Репозитории -->
+        <div class="card">
+            <h2>Репозитории</h2>
+            <ul>
+                <li><a href="https://github.com/aminaadzh/doklad-infobez/tree/master/внешний%20курс" target="_blank">GitHub: материалы курса</a>
+                    <ul>
+                        <li><a href="https://github.com/aminaadzh/doklad-infobez/releases/tag/v2.2.3" target="_blank">Релиз v2.2.3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Скриншоты прохождения -->
+        <div class="card">
+            <h2>Скриншоты прохождения курса</h2>
+            <div class="gallery">
+                <img src="image/1.1.png" alt="Скриншот 1">
+                <img src="image/1.2.png" alt="Скриншот 2">
+                <img src="image/1.3.png" alt="Скриншот 3">
+                <img src="image/1.4.png" alt="Скриншот 4">
+            </div>
+            <p style="margin-top:10px; font-size:0.9em; color:#777;">
+                Замените <code>image/1.1.png</code> на пути к вашим реальным скриншотам (например, <code>image/1.png</code> — те, что вы присылали ранее).
+            </p>
+        </div>
+
+        <!-- Как создать сайт -->
+        <div class="card">
+            <h2>Как создать такой сайт на GitHub Pages</h2>
+            <ol class="step-list">
+                <li>Войдите в свой GitHub-аккаунт: <a href="https://github.com/aminaadzh" target="_blank">github.com/aminaadzh</a></li>
+                <li>Создайте новый репозиторий: кнопка <strong>"+" → New repository</strong></li>
+                <li>Назовите репозиторий: <code>aminaadzh.github.io</code><br>
+                    <small style="color:#777;">(замените <code>aminaadzh</code> на ваш реальный username, если он другой)</small>
+                </li>
+                <li>Поставьте галочку <strong>"Public"</strong> (обязательно!)</li>
+                <li>Нажмите <strong>"Create repository"</strong></li>
+                <li>Нажмите <strong>"Add file" → "Create new file"</strong></li>
+                <li>Назовите файл: <code>index.html</code></li>
+                <li>Скопируйте весь код выше и вставьте в редактор</li>
+                <li>Нажмите <strong>"Commit new file"</strong></li>
+                <li>Подождите 1-2 минуты</li>
+                <li>Откройте в браузере: <code>https://aminaadzh.github.io</code></li>
+            </ol>
+            <p style="margin-top:15px;">Готово! Ваш сайт работает.</p>
+            <p style="margin-top:10px; font-size:0.9em; color:#777;">
+                Если хотите добавить скриншоты — создайте папку <code>image</code> и загрузите туда файлы через кнопку "Upload files".
+            </p>
+        </div>
+
+        <footer>
+            <p>© 2026 Амина Аджигалиева • РУДН</p>
+        </footer>
+
+    </div>
+</body>
+</html>
