@@ -61,15 +61,6 @@
             font-weight: 500;
         }
         .card a:hover { text-decoration: underline; color: #4a3db5; }
-        .badge {
-            display: inline-block;
-            background: #dfe6e9;
-            color: #2d3436;
-            padding: 3px 10px;
-            border-radius: 15px;
-            font-size: 0.85em;
-            margin-left: 8px;
-        }
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -81,6 +72,7 @@
             border-radius: 8px;
             border: 1px solid var(--border);
             transition: transform 0.2s;
+            cursor: pointer;
         }
         .gallery img:hover { transform: scale(1.02); }
         footer {
@@ -90,22 +82,15 @@
             color: #777;
             font-size: 0.9em;
         }
-        .step-list { counter-reset: step; }
-        .step-list li { counter-increment: step; margin: 10px 0; }
-        .step-list li::before {
-            content: counter(step);
-            background: var(--accent);
-            color: white;
-            border-radius: 50%;
-            display: inline-block;
-            width: 24px;
-            height: 24px;
-            text-align: center;
-            line-height: 24px;
-            margin-right: 8px;
-            font-size: 0.8em;
+        details { margin-top: 10px; }
+        summary {
+            cursor: pointer;
+            color: var(--accent);
             font-weight: bold;
+            padding: 8px 0;
+            font-size: 1.05em;
         }
+        summary:hover { color: #4a3db5; }
     </style>
 </head>
 <body>
@@ -133,7 +118,7 @@
         <div class="card">
             <h2>Скринкасты</h2>
 
-            <h3>Часть 1.</h3>
+            <h3>Часть 1. Сетевые протоколы и технологии</h3>
             <ul>
                 <li><strong>Rutube:</strong> <a href="https://rutube.ru/plst/1569411" target="_blank">Плейлист</a>
                     <ul>
@@ -149,7 +134,7 @@
                 </li>
             </ul>
 
-            <h3>Часть 2.</h3>
+            <h3>Часть 2. Шифрование, пароли и защита от фишинга</h3>
             <ul>
                 <li><strong>Rutube:</strong> <a href="https://rutube.ru/plst/1569411" target="_blank">Плейлист</a>
                     <ul>
@@ -165,7 +150,7 @@
                 </li>
             </ul>
 
-            <h3>Часть 3.</h3>
+            <h3>Часть 3. Криптография, электронная подпись и блокчейн</h3>
             <ul>
                 <li><strong>Rutube:</strong> <a href="https://rutube.ru/plst/1569411" target="_blank">Плейлист</a>
                     <ul>
@@ -202,18 +187,80 @@
             </ul>
         </div>
 
-        <!-- Скриншоты прохождения -->
+        <!-- Скриншоты: Часть 1 -->
         <div class="card">
             <h2>Скриншоты прохождения курса</h2>
-            <div class="gallery">
-                <img src="image/1.1.png" alt="Скриншот 1">
-                <img src="image/1.2.png" alt="Скриншот 2">
-                <img src="image/1.3.png" alt="Скриншот 3">
-                <img src="image/1.4.png" alt="Скриншот 4">
-            </div>
-            <p style="margin-top:10px; font-size:0.9em; color:#777;">
-                Замените <code>image/1.1.png</code> на пути к вашим реальным скриншотам (например, <code>image/1.png</code> — те, что вы присылали ранее).
-            </p>
+            
+            <details>
+                <summary>Часть 1.</summary>
+                <div class="gallery">
+                    <img src="image/1.1.png" alt="Протокол прикладного уровня">
+                    <img src="image/1.2.png" alt="Транспортный уровень TCP">
+                    <img src="image/1.3.png" alt="Корректные IPv4-адреса">
+                    <img src="image/1.4.png" alt="DNS-сервер">
+                    <img src="image/1.5.png" alt="Модель TCP/IP">
+                    <img src="image/1.6.png" alt="Протокол HTTP">
+                    <img src="image/1.7.png" alt="Фазы HTTPS">
+                    <img src="image/1.8.png" alt="Генерация сессионного ключа">
+                    <img src="image/1.9.png" alt="TLS-рукопожатие">
+                    <img src="image/1.10.png" alt="Что хранят куки">
+                    <img src="image/1.11.png" alt="Куки не для надёжности">
+                    <img src="image/1.12.png" alt="Куки генерирует сервер">
+                    <img src="image/1.13.png" alt="Таблица данных">
+                    <img src="image/1.14.png" alt="Таблица чисел">
+                    <img src="image/1.15.png" alt="Маршрутизация Tor">
+                    <img src="image/1.16.png" alt="Общий секретный ключ">
+                    <img src="image/1.17.png" alt="Tor у получателя">
+                    <img src="image/1.18.png" alt="Wi-Fi это">
+                    <img src="image/1.19.png" alt="Уровень Wi-Fi">
+                    <img src="image/1.20.png" alt="Небезопасный WEP">
+                    <img src="image/1.21.png" alt="Шифрование хост-роутер">
+                    <img src="image/1.22.png" alt="WPA2 Personal">
+                </div>
+            </details>
+
+            <details>
+                <summary>Часть 2.</summary>
+                <div class="gallery">
+                    <img src="image/2.1.png" alt="Загрузочный сектор">
+                    <img src="image/2.2.png" alt="Симметричное шифрование диска">
+                    <img src="image/2.3.png" alt="BitLocker и VeraCrypt">
+                    <img src="image/2.4.png" alt="Стойкий пароль">
+                    <img src="image/2.5.png" alt="Менеджер паролей">
+                    <img src="image/2.6.png" alt="Капча">
+                    <img src="image/2.7.png" alt="Хэширование паролей">
+                    <img src="image/2.8.png" alt="Соль и перебор">
+                    <img src="image/2.9.png" alt="Защита от перебора">
+                    <img src="image/2.10.png" alt="Фишинговые ссылки">
+                    <img src="image/2.11.png" alt="Спуфинг письма">
+                    <img src="image/2.12.png" alt="Email-спуфинг">
+                    <img src="image/2.13.png" alt="Вирус-троян">
+                    <img src="image/2.14.png" alt="Ключ Signal">
+                    <img src="image/2.15.png" alt="Сквозное шифрование">
+                </div>
+            </details>
+
+            <details>
+                <summary>Часть 3.</summary>
+                <div class="gallery">
+                    <img src="image/3.1.png" alt="Асимметричные примитивы">
+                    <img src="image/3.2.png" alt="Хэш-функция">
+                    <img src="image/3.3.png" alt="Алгоритмы подписи">
+                    <img src="image/3.4.png" alt="Код аутентификации MAC">
+                    <img src="image/3.5.png" alt="Диффи-Хэллман">
+                    <img src="image/3.6.png" alt="Протокол ЭЦП">
+                    <img src="image/3.7.png" alt="Верификация подписи">
+                    <img src="image/3.8.png" alt="Свойства ЭЦП">
+                    <img src="image/3.9.png" alt="Сертификат для ФНС">
+                    <img src="image/3.10.png" alt="Удостоверяющий центр">
+                    <img src="image/3.11.png" alt="Платёжные системы">
+                    <img src="image/3.12.png" alt="Многофакторная аутентификация">
+                    <img src="image/3.13.png" alt="Онлайн-платежи 3D Secure">
+                    <img src="image/3.14.png" alt="Доказательство работы PoW">
+                    <img src="image/3.15.png" alt="Свойства консенсуса">
+                    <img src="image/3.16.png" alt="Ключи в блокчейне">
+                </div>
+            </details>
         </div>
 
         <footer>
